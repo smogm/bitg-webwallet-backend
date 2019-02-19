@@ -1,29 +1,29 @@
-# Bitg webwallet backend
+# ECCoin webwallet backend
 
 
-This is the Bitg webwallet backend.
+This is the ECCoin webwallet backend.
 
 
-## Install bitcoingreen node, start node and rpc provider 
+## Install ECCoin node, start node and rpc provider 
 
 ### Setup dependencies and download release of bitcoingreen node
 
 Build doc will be found here:
 
-    https://github.com/bitcoingreen/bitcoingreen/releases
+    https://github.com/project-ecc/eccoin/releases
 
 Run the following commands:
 
     add-apt-repository ppa:bitcoin/bitcoin
     apt-get update
-    wget https://github.com/bitcoingreen/bitcoingreen/releases/download/v1.3.0/bitcoingreen-1.3.0-x86_64-linux-gnu.tar.gz
-    tar -zxvf bitcoingreen-1.3.0-x86_64-linux-gnu.tar.gz
+    wget https://github.com/project-ecc/eccoin/releases/download/eccoin0.2.5.14/eccoin-v0.2.5.14-linux64.zip
+    unzip eccoin-v0.2.5.14-linux64.zip
 
 ### Node config
 
 Config file can be found here:
 
-    ~/.bitcoingreen/bitcoingreen.conf
+    ~/.eccoin/eccoin.conf
 
 Config should be following:
 
@@ -39,16 +39,16 @@ Config should be following:
 
 This will use default rpc port(9332).
 
-### Start bitcoingreen node
+### Start ECCoin node
 
 Start node:
 
-    cd `bitcoingreen bin directory`
-    ./bitcoingreend
+    cd `eccoin bin directory`
+    ./eccoind
 
 Check node status:
 
-    ./bitcoingreen-cli getinfo
+    ./eccoind getinfo
 
 Check rpc provider
 
@@ -76,7 +76,7 @@ Run backend in development mode
 
 Then, whenever you need to restart the snowball backend, you can run:
 
-    pm2 restart bitg-wallet-backend
+    pm2 restart ecc-wallet-backend
 
 
 
@@ -84,7 +84,7 @@ To view more detailed documentation regarding the API, check out the [API docume
 
 
 This application integrates the following services & APIs:
-* [bitcoingreen node rpc](https://github.com/bitcoingreen/) - RPC documentation is not ready yet.
+* [eccoin node rpc](https://github.com/project-ecc) - RPC documentation is not ready yet.
 
 ### Adding DNS or SSL
 
